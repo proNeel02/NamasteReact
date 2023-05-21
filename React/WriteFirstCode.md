@@ -4,7 +4,7 @@
 
 **Code :**
 
-```javascript
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +26,7 @@
 
 **Code :**
 
-```javascript
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,7 +61,7 @@
 ## 2. using React
 
 **Code :**
-```javascript
+```html
   <body>
     <div id="root"></div>
 
