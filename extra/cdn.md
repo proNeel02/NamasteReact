@@ -11,10 +11,9 @@ It's a geographically distributed group of servers that work together to provide
 
 **NetWork** : Group of Servers Working toghter to send Content back to the Client therefore it's call Network
 
-
-Consider a Game game server located in US 
-here , consider
-    player1 from *India*
+Consider a Game server located in US 
+here,
+    player1 from *India*git
     player2 from *US* 
 
 same server for player1 taking 300ms and player 2 taking 20ms,
