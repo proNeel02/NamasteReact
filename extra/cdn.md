@@ -13,7 +13,7 @@ It's a geographically distributed group of servers that work together to provide
 
 Consider a Game server located in US 
 here,
-    player1 from *India*git
+    player1 from *India*
     player2 from *US* 
 
 same server for player1 taking 300ms and player 2 taking 20ms,
