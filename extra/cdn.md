@@ -1,3 +1,5 @@
+# what is CDN ?
+# How CDN Works?
 # CDN (Content Delevery Network)
 
 It's a geographically distributed group of servers that work together to provide fast delivery of internet content.
@@ -34,5 +36,10 @@ They Install a group/cluster of servers in many different locations around the g
 
 3> **Protection against potential DDOS attacks** :
 many servers are located, if one server is get affected by **DDOS** other backup server kicks into action and serve customers in that region
+
+4> **Analytics** : 
+  Its helps main server to collect consumer data based on Movies or TV shows , consumer Watch the most according to the region if In US Big Bang Theory is Most Watched and in south Korea Its Ok to be Not Okay are consumed by the that perticular reagin then main server shows in Most watch category  Big Bang Theory to the US consumers and 
+  Its Ok to be Not Okay to the South Korean reagin. 
+ 
 
 
