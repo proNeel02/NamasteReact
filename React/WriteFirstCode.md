@@ -4,7 +4,7 @@
 
 **Code :**
 
-```
+```javascript
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +26,8 @@
 
 **Code :**
 
-```<!DOCTYPE html>
+```javascript
+<!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
@@ -60,9 +61,22 @@
 ## 2. using React
 
 **Code :**
-```
+```javascript
+  <body>
+    <div id="root"></div>
 
-
-
-
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script>
+      const element = React.createElement("h1", {}, "Hello from React");
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(element);
+    </script>
+  </body>
 ```
