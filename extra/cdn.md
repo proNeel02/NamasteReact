@@ -5,7 +5,7 @@ It's a geographically distributed group of servers that work together to provide
 **Content**: The content or assets can be anything, HTML pages, CSS files, Javascript files, images, videos, songs etc.
 
 >```<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> ```
->>Here we are requesting google font to provide  google particular font Design 
+>>Here we are requesting google font to provide particular font Design 
 
 **Delivery** : Providing Internet Content to Client
 
