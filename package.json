@@ -1,0 +1,25 @@
+{
+  "name": "what-i-learn-today",
+  "version": "1.0.0",
+  "description": "This React by Prashant",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proNeel02/NamasteReact.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Prahant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/proNeel02/NamasteReact/issues"
+  },
+  "homepage": "https://github.com/proNeel02/NamasteReact#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
