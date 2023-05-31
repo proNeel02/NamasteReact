@@ -5,8 +5,8 @@
   "main": "App.js",
   "scripts": {
     "test": "jest",
-    "start":"parcel index.html",
-    "bulid":"parcel bulid index.html"
+    "start": "parcel index.html",
+    "bulid": "parcel bulid index.html"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,10 @@
     "process": "^0.11.10"
   },
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-bootstrap": "^2.7.4",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.9.0"
   }
 }
