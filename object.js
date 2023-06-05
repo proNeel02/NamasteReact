@@ -13,7 +13,7 @@ export const cards = [
         URL:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/a8yewdrdw7ublpzqa8wo",
         Title: "Zen Cafe",
         Cusions:"European",
-        Ratings:"4.4",
+        Ratings:"3.4",
         DeliveryTime:"46 MINS",
         Price:"₹ 460 FOR TWO",
         Id:"2"
@@ -24,7 +24,7 @@ export const cards = [
         URL:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cskowl7b4xc2cwps3dhe",
         Title: "Grey Soul Coffee Roasters",
         Cusions:"Beverages, Desserts",
-        Ratings:"4.3",
+        Ratings:"3.3",
         DeliveryTime:"46 MINS",
         Price:"₹ 460 FOR TWO",
         Id:"3"
@@ -44,7 +44,7 @@ export const cards = [
         URL:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/glutwislftg8k4496uov",
         Title: "Sagar",
         Cusions:"North Indian, South Indian",
-        Ratings:"4.3",
+        Ratings:"3.3",
         DeliveryTime:"46 MINS",
         Price:"₹ 460 FOR TWO",
         Id:"5"
@@ -76,7 +76,7 @@ export const cards = [
         URL:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/usj6ahnbc4lvrmxlzuee",
         Title: "Blue Nile",
         Cusions:"Indian, Chinese",
-        Ratings:"4.3",
+        Ratings:"3.3",
         DeliveryTime:"46 MINS",
         Price:"₹ 460 FOR TWO",
         Id:"8"
