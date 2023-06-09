@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import NavigationBar from "./Components/NavigationBar.js";
 import Body from "./Components/Body.jsx";
 
+
 const AppLayOut = () => {
   return (
     <>

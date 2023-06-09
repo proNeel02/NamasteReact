@@ -5,7 +5,7 @@ import { LOGO_URL } from '../../utils/Constants';
 const NavigationBar = () => {
     return (
         <>
-          <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+          <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className="justify-content-between-navbar">
             <Container>
               <Navbar.Brand href="#home">
                 <img
@@ -18,6 +18,7 @@ const NavigationBar = () => {
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     
               <Navbar.Collapse id="responsive-navbar-nav">
+
                 <Nav className="me-auto">
                   <Nav.Link href="#features">Home</Nav.Link>
                   <Nav.Link href="#pricing">About US</Nav.Link>
@@ -27,6 +28,7 @@ const NavigationBar = () => {
                     Cart
                   </Nav.Link>
                 </Nav>
+
               </Navbar.Collapse>
             </Container>
           </Navbar>
