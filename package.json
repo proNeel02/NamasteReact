@@ -2,14 +2,11 @@
   "name": "what-i-learn-today",
   "version": "1.0.0",
   "description": "This React by Prashant",
-  "main": "App.js",
   "scripts": {
     "test": "jest",
     "start": "parcel index.html",
-    "bulid": "parcel bulid index.html"
+    "build": "parcel build index.html"
   },
-
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/proNeel02/NamasteReact.git"
@@ -33,6 +30,8 @@
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-icons": "^4.9.0",
+    "react-router-dom": "^6.14.1",
+    "read": "^2.1.0",
     "typescript": "^5.0.4"
   }
 }

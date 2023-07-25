@@ -10,6 +10,9 @@ import {
 } from "react-bootstrap";
 
 import ComponentCard from "../../ComponentCard";
+import ShimmerComponent from "./ShimmerComponent";
+import { Link } from "react-router-dom";
+
 const Body = () => {
   const [resData, setResData] = useState(null);
 
@@ -18,21 +21,20 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-
-    try{
+    try {
       const data = await fetch(
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6126255&lng=77.04108959999999&page_type=DESKTOP_WEB_LISTING"
       );
       const jsonData = await data.json();
-      console.log(jsonData);
+      // console.log(jsonData);
       setResData(jsonData?.data?.cards[2]?.data?.data?.cards);
-    }catch(err){
-   console.log(err); 
+    } catch (err) {
+      console.log(err);
     }
   };
 
   if (resData === null) {
-    return <h1>Loading...</h1>;
+    return <ShimmerComponent />;
   } else {
     return (
       <>

@@ -3,9 +3,11 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import Badge from "react-bootstrap/Badge";
 
 import { AiOutlineStar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const ComponentCard = (props) => {
   const {
+    id,
     cloudinaryImageId,
     costForTwoString,
     cuisines,
@@ -17,7 +19,13 @@ const ComponentCard = (props) => {
   return (
     <>
       {/* Second Row */}
-      <Col md="3" className="p-2" style={{ border: "none", cursor: "pointer" }}>
+      <Col
+        md="3"
+        className="p-2"
+        style={{ border: "none", cursor: "pointer", textDecoration: "none" }}
+        as={Link}
+        to={"/restaurents/" + id}
+      >
         <Card className="border-0 shadow">
           <Card.Img
             variant="top"
