@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, FormLabel, Row } from "react-bootstrap";
 import Badge from "react-bootstrap/Badge";
 
 import { AiOutlineStar } from "react-icons/ai";
@@ -21,7 +21,6 @@ const ComponentCard = (props) => {
       {/* Second Row */}
       <Col
         md="3"
-        className="p-2"
         style={{ border: "none", cursor: "pointer", textDecoration: "none" }}
         as={Link}
         to={"/restaurents/" + id}
@@ -66,6 +65,32 @@ const ComponentCard = (props) => {
       </Col>
     </>
   );
+};
+
+// Higher Order Component is a Component that take other component as a parameter and return a Component as a value.
+
+export const withPromotedLabel = (ComponentCard) => {
+  return (props) => {
+    return (
+      <Col md={3}>
+        <label
+          style={{
+            position: "absolute",
+            backgroundColor: "gray",
+            color: "white",
+            borderRadius: "5px",
+            padding: "5px",
+            fontSize: "12px",
+            fontWeight: "bold",
+            zIndex: 1,
+          }}
+        >
+          Promoted
+        </label>
+        <ComponentCard {...props} />
+      </Col>
+    );
+  };
 };
 
 export default ComponentCard;

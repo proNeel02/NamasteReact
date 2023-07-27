@@ -11,10 +11,12 @@ import {
 
 import ComponentCard from "../../ComponentCard";
 import ShimmerComponent from "./ShimmerComponent";
-import { Link } from "react-router-dom";
+import { withPromotedLabel } from "../../ComponentCard";
 
 const Body = () => {
   const [resData, setResData] = useState(null);
+
+  const RestraCardWithPromotedLabel = withPromotedLabel(ComponentCard);
 
   useEffect(() => {
     fetchData();
@@ -26,7 +28,7 @@ const Body = () => {
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6126255&lng=77.04108959999999&page_type=DESKTOP_WEB_LISTING"
       );
       const jsonData = await data.json();
-      // console.log(jsonData);
+      console.log(jsonData?.data?.cards[2]?.data?.data?.cards);
       setResData(jsonData?.data?.cards[2]?.data?.data?.cards);
     } catch (err) {
       console.log(err);
@@ -64,7 +66,14 @@ const Body = () => {
             <Col md="12">
               <Row>
                 {resData?.map((obj) => {
-                  return <ComponentCard key={obj?.data?.id} object={obj} />;
+                  return obj?.data?.promoted ? (
+                    <RestraCardWithPromotedLabel
+                      key={obj?.data?.id}
+                      object={obj}
+                    />
+                  ) : (
+                    <ComponentCard key={obj?.data?.id} object={obj} />
+                  );
                 })}
               </Row>
             </Col>

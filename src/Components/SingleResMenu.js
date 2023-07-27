@@ -3,6 +3,7 @@ import { useResMenu } from "../../utils/useResMenu";
 import { useParams } from "react-router-dom";
 import ShimmerComponent from "../Components/ShimmerComponent";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import RestaurantCategory from "./RestaurantCategory";
 
 const SingleResMenu = () => {
   const params = useParams();
@@ -11,6 +12,20 @@ const SingleResMenu = () => {
   const singleRes = useResMenu(resId);
 
   if (singleRes === null) return <ShimmerComponent />;
+
+  const { name, cuisines, costForTwoMessage } =
+    singleRes?.cards[0]?.card?.card?.info;
+
+  const { itemCards } =
+    singleRes?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
+      ?.card;
+
+  const Categories =
+    singleRes?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+      (c) =>
+        c?.card?.card?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+    );
 
   return (
     <Container className="mt-3">
@@ -23,19 +38,14 @@ const SingleResMenu = () => {
         >
           <Card className="border-0">
             <Card.Body>
-              <h4>{singleRes?.cards[0]?.card?.card?.info?.name}</h4>
               <Container className="text-muted">
+                <h3 style={{ color: "black" }}>{name}</h3>
                 <span style={{ display: "block", fontSize: "13px" }}>
-                  {singleRes?.cards[0]?.card?.card?.info?.cuisines.join(", ")}
+                  {cuisines.join(", ")} - {costForTwoMessage}
                 </span>
-                <span style={{ display: "block", fontSize: "13px" }}>
-                  {singleRes?.cards[0]?.card?.card?.info?.locality}
-                </span>
-                {singleRes?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.map(
-                  (res) => (
-                    <li>Elemnet</li>
-                  )
-                )}
+                {Categories?.map((category) => {
+                  return <RestaurantCategory data={category?.card?.card} />;
+                })}
               </Container>
             </Card.Body>
           </Card>
