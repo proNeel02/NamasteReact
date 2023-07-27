@@ -4,6 +4,7 @@ import Badge from "react-bootstrap/Badge";
 
 import { AiOutlineStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { IMG_URL } from "./utils/Constants";
 
 const ComponentCard = (props) => {
   const {
@@ -29,7 +30,7 @@ const ComponentCard = (props) => {
           <Card.Img
             variant="top"
             src={
-              `https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/` +
+              IMG_URL +
               cloudinaryImageId
             }
             // src={URL}
