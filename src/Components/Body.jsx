@@ -13,6 +13,7 @@ import ComponentCard from "../../ComponentCard";
 import ShimmerComponent from "./ShimmerComponent";
 import { withPromotedLabel } from "../../ComponentCard";
 
+// import { useSelector } from "react-redux";
 const Body = () => {
   const [resData, setResData] = useState(null);
 
@@ -24,12 +25,20 @@ const Body = () => {
 
   const fetchData = async () => {
     try {
-      const data = await fetch(
+      const response = await fetch(
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6126255&lng=77.04108959999999&page_type=DESKTOP_WEB_LISTING"
       );
-      const jsonData = await data.json();
-      console.log(jsonData?.data?.cards[2]?.data?.data?.cards);
-      setResData(jsonData?.data?.cards[2]?.data?.data?.cards);
+      const data = await response.json();
+
+      setResData(
+        data?.data.cards[5]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
+      );
+
+      // console.log(
+      //   data?.data.cards[5]?.card?.card?.gridElements?.infoWithStyle
+      //     ?.restaurants
+      // );
     } catch (err) {
       console.log(err);
     }
@@ -55,6 +64,7 @@ const Body = () => {
                         cursor: "pointer",
                         fontWeight: "500",
                       }}
+                  
                     />
                   </InputGroup>
                 </Card.Body>
@@ -72,7 +82,7 @@ const Body = () => {
                       object={obj}
                     />
                   ) : (
-                    <ComponentCard key={obj?.data?.id} object={obj} />
+                    <ComponentCard key={obj?.info?.id} object={obj} />
                   );
                 })}
               </Row>

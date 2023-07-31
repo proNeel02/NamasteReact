@@ -2,7 +2,11 @@ import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { LOGO_URL } from "../../utils/Constants";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 const NavigationBar = () => {
+  const cart = useSelector((state) => state.app.list);
+
   return (
     <>
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
@@ -29,12 +33,19 @@ const NavigationBar = () => {
               <Nav.Link as={Link} to={"/contactus"}>
                 Contact US
               </Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
-                Cart
+              <Nav.Link as={Link} to={"/cart"}>
+                Cart ({cart.length})
               </Nav.Link>
 
               <Nav.Link eventKey={2} href="#memes">
-                <Button size="sm" variant="secondary">
+                <Button
+                  size="sm"
+                  style={{
+                    backgroundColor: "transparent",
+                    color: "gray",
+                    border: "none",
+                  }}
+                >
                   logout
                 </Button>
               </Nav.Link>

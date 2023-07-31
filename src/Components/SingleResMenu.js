@@ -9,6 +9,7 @@ const SingleResMenu = () => {
   const params = useParams();
   const { resId } = params;
 
+  const [showIndex, setShowIndex] = useState(-1);
   const singleRes = useResMenu(resId);
 
   if (singleRes === null) return <ShimmerComponent />;
@@ -43,8 +44,23 @@ const SingleResMenu = () => {
                 <span style={{ display: "block", fontSize: "13px" }}>
                   {cuisines.join(", ")} - {costForTwoMessage}
                 </span>
-                {Categories?.map((category) => {
-                  return <RestaurantCategory data={category?.card?.card} />;
+                {Categories?.map((category, index) => {
+                  return (
+                    <RestaurantCategory
+                      key={category?.card?.card?.title}
+                      data={category?.card?.card}
+                      showData={index === showIndex ? true : false}
+                      setShowIndex={(LatestIndex) => {
+                        setShowIndex((prevIndex) => {
+                          if (LatestIndex === prevIndex) {
+                            return -1;
+                          }
+                          return LatestIndex;
+                        });
+                      }}
+                      LatestIndex={index}
+                    />
+                  );
                 })}
               </Container>
             </Card.Body>

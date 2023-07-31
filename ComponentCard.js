@@ -6,16 +6,16 @@ import { AiOutlineStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { IMG_URL } from "./utils/Constants";
 
-const ComponentCard = (props) => {
+const ComponentCard = ({object}) => {
   const {
     id,
     cloudinaryImageId,
-    costForTwoString,
+    costForTwo,
     cuisines,
     deliveryTime,
     name,
     avgRating,
-  } = props?.object?.data;
+  } = object?.info;
   // urlinitial = https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/
   return (
     <>
@@ -39,8 +39,8 @@ const ComponentCard = (props) => {
           <Card.Body>
             <Card.Title style={{ fontSize: "15px" }}>{name}</Card.Title>
             <span className="text-muted">
-              {(cuisines.length > 2 ? cuisines.slice(0, 2) : cuisines).join(
-                ","
+              {(cuisines.length > 2 ? cuisines.slice(0, 3) : cuisines).join(
+                ", "
               )}
             </span>
           </Card.Body>
@@ -57,8 +57,8 @@ const ComponentCard = (props) => {
                 className="d-flex justify-content-evenly text-muted"
                 style={{ fontSize: "10px" }}
               >
-                <li className="pe-3">{`${deliveryTime} MINS`}</li>
-                <li>{costForTwoString}</li>
+                <li className="pe-3">{`${25} MINS`}</li>
+                <li>{costForTwo}</li>
               </ul>
             </Col>
           </Row>
